@@ -1,0 +1,11 @@
+plugins { id 'java-library' }
+java { sourceCompatibility = JavaVersion.VERSION_1_8; targetCompatibility = JavaVersion.VERSION_1_8 }
+dependencies {
+ api 'com.google.guava:guava:33.4.0-android'
+ api 'org.apache.kerby:kerb-client:2.1.2'
+ testImplementation platform('org.junit:junit-bom:5.11.4')
+ testImplementation 'org.junit.jupiter:junit-jupiter'
+ testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+ testImplementation 'org.apache.kerby:kerb-simplekdc:2.1.2'
+}
+test { useJUnitPlatform() }

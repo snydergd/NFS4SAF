@@ -1,0 +1,10 @@
+NFS4SAF includes source from dCache NFS4J 0.28.5 and ONCRPC4J 3.4.3.
+Original notices identify Deutsches Elektronen-Synchrotron (DESY), dCache
+contributors and other upstream copyright holders. The complete file notices
+are preserved in the source tree. These parties do not endorse NFS4SAF.
+
+Apache Kerby and Guava are resolved as runtime dependencies. Their upstream
+copyright, license and NOTICE material remains applicable.
+
+See LICENSE for component scope, THIRD_PARTY.md for source provenance and
+modifications, and licenses/ for the supplied license texts.

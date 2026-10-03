@@ -1,0 +1,61 @@
+NFS4SAF — licensing overview
+==========================
+
+This repository contains components under different licenses. It is not entirely
+Apache-2.0. This overview identifies their scope; it does not replace any license
+text, remove upstream notices, or relicense third-party code.
+
+1. NFS4SAF-authored material — Apache License, Version 2.0
+
+Except where an existing file notice says otherwise, the following original
+material is provided under Apache-2.0:
+
+- app/src/main/java/info/gdsnyder/**
+- protocol/src/main/java/info/gdsnyder/**
+- protocol/src/main/java/org/dcache/oncrpc4j/xdr/ByteArrayXdr.java
+  (an original adapter despite its placement in an upstream namespace)
+- original tests, build configuration, documentation and project artwork.
+
+The full terms are in licenses/Apache-2.0.txt.
+
+2. Vendored dCache NFS4J and ONCRPC4J — upstream GNU Library/Lesser GPL
+
+The remaining source under protocol/src/main/java/org/dcache/nfs/** and
+protocol/src/main/java/org/dcache/oncrpc4j/** comes from the upstream libraries
+identified in THIRD_PARTY.md. Original copyright and license notices apply.
+Modifications to those files remain subject to their applicable upstream terms;
+they are not covered only by the license for our original application code.
+
+Files carrying the GNU Library GPL version 2-or-later header retain those terms
+(SPDX: LGPL-2.0-or-later). Some generated NFS types carry a generator provenance
+header instead of an individual license grant; they are shipped as part of the
+upstream LGPL package. Do not infer an Apache license from a missing LGPL header.
+The exact upstream license version for those generator-only files should be
+confirmed before selecting a single license expression for a public release.
+
+Copies of LGPL-2.0, LGPL-2.1, LGPL-3.0 and GPL-3.0 are in licenses/. Their presence
+alone does not mean each license applies to every file or grant a new license
+choice beyond the upstream terms. File notices and upstream grants determine
+which versions are available.
+
+3. Dependencies resolved by the build
+
+Apache Kerby and Guava retain their Apache-2.0 licenses and upstream notices.
+JUnit Jupiter is a test-only dependency under EPL-2.0. Kerby's test KDC is
+Apache-2.0. The optional Robolectric Android API jar is compilation-only and is
+not distributed in the Android application. Transitive dependencies retain their
+own licenses; this overview is not a complete APK dependency audit.
+
+4. Distribution of the Android application
+
+An APK includes both our application code and third-party library code.
+Distributing it must satisfy the applicable licenses together; calling the APK
+"Apache-2.0" alone does not discharge LGPL requirements. Preserve the required
+notices and license texts and provide the library source, including modifications,
+and the application/build material needed to rebuild or relink with a modified
+library, as required by the applicable LGPL version. Do not impose restrictions
+inconsistent with those permissions.
+
+Publishing this complete source tree and build instructions is part of that
+process, not a guarantee that every binary-distribution requirement is satisfied.
+See THIRD_PARTY.md for versions, source artifact URLs and recorded modifications.

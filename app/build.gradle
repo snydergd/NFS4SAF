@@ -1,0 +1,11 @@
+plugins { id 'com.android.application' }
+android {
+ namespace 'info.gdsnyder.nfs.android'
+ useLibrary 'android.test.runner'
+ useLibrary 'android.test.base'
+ compileSdk 35
+ defaultConfig { applicationId 'info.gdsnyder.nfs.android'; minSdk 26; targetSdk 35; versionCode 8; versionName '0.8.0'; testInstrumentationRunner 'android.test.InstrumentationTestRunner' }
+ compileOptions { sourceCompatibility JavaVersion.VERSION_1_8; targetCompatibility JavaVersion.VERSION_1_8 }
+ packaging { resources { excludes += ['META-INF/DEPENDENCIES', 'META-INF/LICENSE*', 'META-INF/NOTICE*'] } }
+}
+dependencies { implementation project(':protocol') }

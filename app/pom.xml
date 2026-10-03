@@ -1,0 +1,8 @@
+<!-- Optional JVM compilation check against Android API 27. This does not build an APK. -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"><modelVersion>4.0.0</modelVersion>
+<parent><groupId>info.gdsnyder</groupId><artifactId>nfs4saf</artifactId><version>0.1.0</version></parent>
+<artifactId>android-source-check</artifactId>
+<dependencies>
+ <dependency><groupId>info.gdsnyder</groupId><artifactId>protocol</artifactId><version>0.1.0</version></dependency>
+ <dependency><groupId>org.robolectric</groupId><artifactId>android-all</artifactId><version>8.1.0-robolectric-4611349</version><scope>provided</scope></dependency>
+</dependencies></project>
